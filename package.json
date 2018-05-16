@@ -1,33 +1,27 @@
 {
-  "name": "webpack-library-starter",
-  "version": "1.0.2",
-  "description": "Produce universal library with webpack and es6",
-  "main": "lib/library.js",
+  "name": "jtable",
+  "version": "0.0.1",
+  "description": "A simple Data Table compatible with KNP Pagination Component",
+  "main": "lib/jtable.js",
   "scripts": {
-    "build": "webpack --env dev && webpack --env build && npm run test",
+    "build": "webpack --env dev && webpack --env build",
+    "prod": "npm build && npm run test",
     "dev": "webpack --progress --colors --watch --env dev",
-    "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
-    "test:watch": "mocha --require babel-core/register --colors -w ./test/*.spec.js"
+    "test": "jest",
+    "fix": "eslint src/* --fix"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/krasimir/webpack-library-starter.git"
   },
   "keywords": [
-    "webpack",
+    "jtable",
     "es6",
-    "starter",
-    "library",
-    "universal",
-    "umd",
-    "commonjs"
+    "datatable",
+    "knp"
   ],
-  "author": "Krasimir Tsonev",
+  "author": "JC Frane",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/krasimir/webpack-library-starter/issues"
-  },
-  "homepage": "https://github.com/krasimir/webpack-library-starter",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -38,6 +32,7 @@
     "chai": "^4.1.2",
     "eslint": "^4.13.1",
     "eslint-loader": "^1.9.0",
+    "jest": "^22.4.3",
     "mocha": "^4.0.1",
     "webpack": "^3.10.0",
     "yargs": "^10.0.3"
